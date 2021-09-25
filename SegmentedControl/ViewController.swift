@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SegmentedControl
 //
-//  Created by 1 on 24.09.2021.
+//  Created by Andrey Sinetskiy on 24.09.2021.
 //
 
 import UIKit
