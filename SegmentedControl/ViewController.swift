@@ -12,9 +12,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var slider: UISlider!
+    
+    @IBOutlet weak var sliderOne: UISlider!
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.isHidden = true
+        slider.value = 50
+        
+        label.text = String(format: "%.0f", slider.value)
         label.font = label.font.withSize(35)
         label.textAlignment = .center
         label.numberOfLines = 2
@@ -23,10 +28,29 @@ class ViewController: UIViewController {
         
         mainView.isHidden = true
         mainView.layer.cornerRadius = 10
+        
+        slider.minimumValue = 1
+        slider.maximumValue = 100
+        
+       
+        sliderOne.minimumValue = 0
+        sliderOne.maximumValue = 1
+    
     }
 
+    @IBAction func sliderAction(_ sender: UISlider) {
+        label.text =  String(format: "%.0f", slider.value)
+    }
+    
+    
+    @IBAction func sliderOneAction(_ sender: UISlider) {
+        let background = view.backgroundColor
+        view.backgroundColor = background?.withAlphaComponent(CGFloat(sender.value))
+    }
+    
+    
     @IBAction func changeSegment(_ sender: UISegmentedControl) {
-        label.isHidden = false
+        
         mainView.isHidden = false
         runAnimate()
         switch sender.selectedSegmentIndex {
@@ -46,6 +70,7 @@ class ViewController: UIViewController {
             mainView.backgroundColor = .blue
             runAnimate()
         }
+        
     }
     private func runAnimate() {
         

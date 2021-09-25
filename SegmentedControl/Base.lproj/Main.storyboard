@@ -36,19 +36,40 @@
                                 <rect key="frame" x="113" y="407" width="188" height="82"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jxw-bu-R4q">
+                                <rect key="frame" x="88" y="584" width="238" height="30"/>
+                                <color key="maximumTrackTintColor" systemColor="systemYellowColor"/>
+                                <color key="thumbTintColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="9Pr-py-lO6"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="m5v-7e-GsG">
+                                <rect key="frame" x="88" y="661" width="238" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="maximumTrackTintColor" systemColor="systemYellowColor"/>
+                                <color key="thumbTintColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <connections>
+                                    <action selector="sliderOneAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ux2-46-M3y"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
+                            <constraint firstItem="jxw-bu-R4q" firstAttribute="width" secondItem="lIX-Cm-g6K" secondAttribute="width" id="1xh-PS-zD7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nlp-1o-Vyo" secondAttribute="bottom" constant="373" id="8VD-3c-w82"/>
                             <constraint firstItem="9ae-1Y-Q00" firstAttribute="top" secondItem="lIX-Cm-g6K" secondAttribute="bottom" constant="132" id="B4l-Hd-a1o"/>
                             <constraint firstItem="Nlp-1o-Vyo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Msh-uc-f5C"/>
                             <constraint firstItem="Nlp-1o-Vyo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rk7-fg-398"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jxw-bu-R4q" secondAttribute="bottom" constant="249" id="SBT-zf-EZO"/>
                             <constraint firstItem="lIX-Cm-g6K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="UwE-fX-7mx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lIX-Cm-g6K" secondAttribute="trailing" constant="90" id="Wwm-OA-WOw"/>
+                            <constraint firstItem="jxw-bu-R4q" firstAttribute="centerX" secondItem="Nlp-1o-Vyo" secondAttribute="centerX" id="ccQ-F2-95H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9ae-1Y-Q00" secondAttribute="trailing" constant="90" id="fhT-yf-ZeL"/>
                             <constraint firstItem="Nlp-1o-Vyo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="hYA-OJ-GiQ"/>
                             <constraint firstItem="lIX-Cm-g6K" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0345982" id="irZ-2u-qaP"/>
+                            <constraint firstItem="jxw-bu-R4q" firstAttribute="top" secondItem="Nlp-1o-Vyo" secondAttribute="bottom" constant="95" id="kVk-40-7Tn"/>
                             <constraint firstItem="lIX-Cm-g6K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="sPu-bM-Jfy"/>
                             <constraint firstItem="9ae-1Y-Q00" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="xoe-OW-kkQ"/>
                         </constraints>
@@ -57,6 +78,8 @@
                         <outlet property="label" destination="9ae-1Y-Q00" id="pVV-2o-0nV"/>
                         <outlet property="mainView" destination="Nlp-1o-Vyo" id="n6f-JX-zYl"/>
                         <outlet property="segmentedControl" destination="lIX-Cm-g6K" id="Sla-Tf-QiB"/>
+                        <outlet property="slider" destination="jxw-bu-R4q" id="JEi-Hi-4H4"/>
+                        <outlet property="sliderOne" destination="m5v-7e-GsG" id="kb8-9m-Cfe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -70,6 +93,12 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
